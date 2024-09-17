@@ -1,0 +1,96 @@
+.datatable {
+  max-width: 90%;
+  margin: 20px auto;
+  background-color: #202020; 
+  color: white; 
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.heading {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.tablebody {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tablehead th {
+  background-color: #333;
+  padding: 12px;
+  color: white;
+  text-align: left;
+}
+
+.tablebody tr {
+  background-color: #252525;
+  border-bottom: 1px solid #333;
+}
+
+.tablebody tr:hover {
+  background-color: #333;
+}
+
+.tablebody td {
+  padding: 10px 12px;
+}
+
+.tablebody td:nth-child(1) {
+  font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+  table,
+  .tablehead,
+  .tablebody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  .tablehead {
+    display: none;
+  }
+
+  .tablebody tr {
+    margin-bottom: 20px;
+    background-color: #252525;
+    border: none;
+    padding: 10px;
+  }
+
+  .tablebody td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  .tablebody td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #888;
+  }
+}
+
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.savings {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.difference {
+  color: #ff3e3e;
+  font-weight: bold;
+}
